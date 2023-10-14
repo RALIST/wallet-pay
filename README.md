@@ -1,6 +1,14 @@
 # WalletPay API
 Read more info in official documentation: https://docs.wallet.tg/pay/
 
+## Installation
+```ruby
+gem install 'wallet-pay'
+```
+```ruby
+gem 'wallet-pay'
+```
+
 ## Configuration
 ```ruby
 WalletPay.configure do |config|

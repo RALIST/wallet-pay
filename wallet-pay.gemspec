@@ -8,7 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["Alexander Danilov"]
   spec.email = ["23499327+RALIST@users.noreply.github.com"]
 
-  spec.summary = "API wrapper for Wallet Pay"
+  spec.homepage = "https://github.com/RALIST/wallet-pay"
+  spec.summary = "Wrapper for Wallet Pay API"
   spec.description = "API wrapper for Wallet Pay"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
