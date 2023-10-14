@@ -1,24 +1,43 @@
-# Wallet::Pay
+# WalletPay API
+Read more info in official documentation: https://docs.wallet.tg/pay/
 
-TODO: Delete this and the text below, and describe your gem
+## Configuration
+```ruby
+WalletPay.configure do |config|
+  config.token = token
+  config.url = url
+  config.api_version = api_version
+  config.extra_headers = extra_headers
+end
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/wallet/pay`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-## Installation
-
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+```
+or do it with client
+```ruby
+    WalletPay::Client.new(token: token, url: url, ...)
+```
 
 ## Usage
+### Create new order
+```ruby
+WalletPay::Client.new.create_order(**order_params)
+```
+### Preview order
+```ruby
+WalletPay::Client.new.order_preview(order_id: order_id)
+```
+### List orders
+```ruby
+WalletPay::Client.new.orders_list
+```
+### Get orders amount
+```ruby
+WalletPay::Client.new.orders_amount
+```
 
-TODO: Write usage instructions here
+### Webhooks
+```ruby
+Not Implemented
+```
 
 ## Development
 
@@ -28,7 +47,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/wallet-pay. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/wallet-pay/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/wallet-pay. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/RALIST/wallet-pay/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
