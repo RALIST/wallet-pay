@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "wallet-pay"
   spec.version = WalletPay::VERSION
   spec.authors = ["Alexander Danilov"]
-  spec.email = ["squadhog@gmail.com"]
+  spec.email = ["23499327+RALIST@users.noreply.github.com"]
 
   spec.summary = "API wrapper for Wallet Pay"
   spec.description = "API wrapper for Wallet Pay"
